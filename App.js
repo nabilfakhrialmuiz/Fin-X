@@ -25,12 +25,12 @@ import { initializeAuth, getReactNativePersistence, signInWithEmailAndPassword, 
 import { getFirestore, collection, addDoc, query, where, onSnapshot, doc, deleteDoc, updateDoc, getDoc, setDoc, getDocs } from 'firebase/firestore'; 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCVArmx877dE2kq7CSjplzOgD1p7IDCQUQ",
-  authDomain: "financeapp-14777.firebaseapp.com",
-  projectId: "financeapp-14777",
-  storageBucket: "financeapp-14777.firebasestorage.app",
-  messagingSenderId: "897276604467",
-  appId: "1:897276604467:web:4fd7f2843bd1d018b27346"
+  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
